@@ -1,6 +1,6 @@
 import { Tabs } from 'expo-router';
 import React from 'react';
-import { Platform } from 'react-native';
+import { Platform, StatusBar } from 'react-native';
 
 import { HapticTab } from '@/components/HapticTab';
 import { IconSymbol } from '@/components/ui/IconSymbol';
@@ -12,6 +12,8 @@ export default function TabLayout() {
   const colorScheme = useColorScheme();
 
   return (
+    <>
+    <StatusBar backgroundColor='lightblue' />
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
@@ -27,19 +29,41 @@ export default function TabLayout() {
         }),
       }}>
       <Tabs.Screen
-        name="index"
+        name="platform"
         options={{
-          title: 'Home',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
+          title: '广场',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="guangchang" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="video"
         options={{
-          title: 'Explore',
-          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+          title: '视频',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="shiping" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="camera"
+        options={{
+          title: '拍摄',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="paishe" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="message"
+        options={{
+          title: '消息',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="xiaoxi" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="mine"
+        options={{
+          title: '我的',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="wode" color={color} />,
         }}
       />
     </Tabs>
+    </>
   );
 }
