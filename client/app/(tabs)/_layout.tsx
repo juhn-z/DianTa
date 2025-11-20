@@ -29,15 +29,36 @@ export default function TabLayout() {
       <Tabs.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: '广场',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="house.fill" color={color} />,
         }}
       />
       <Tabs.Screen
-        name="explore"
+        name="video"
         options={{
-          title: 'Explore',
+          title: '视频',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="film.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="camero"
+        options={{
+          title: '拍摄',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="camera.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="message"
+        options={{
+          title: '消息',
           tabBarIcon: ({ color }) => <IconSymbol size={28} name="paperplane.fill" color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="mine"
+        options={{
+          title: '我的',
+          tabBarIcon: ({ color }) => <IconSymbol size={28} name="user.fill" color={color} />,
         }}
       />
     </Tabs>
