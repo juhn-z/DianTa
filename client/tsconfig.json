@@ -6,12 +6,26 @@
       "@/*": [
         "./*"
       ]
-    }
+    },
+    "module": "esnext",
+    "target": "esnext",
+    "lib": ["es6"],
+    "allowJs": true,
+    "jsx": "react-native",
+    "noEmit": true,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": false, // 确保不跳过库检查
   },
   "include": [
     "**/*.ts",
     "**/*.tsx",
     ".expo/types/**/*.ts",
     "expo-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules", "babel.config.js", "metro.config.js", "jest.config.js"
   ]
 }
