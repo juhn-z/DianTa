@@ -7,6 +7,7 @@ export default function MineScreen() {
   return (
     <View style={styles.Container}>
       <View style={styles.header}>
+        Mine Page
       </View>
     </View>
   );
